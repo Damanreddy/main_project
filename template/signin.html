@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='UTF-8' />
+  <meta name="description" content="Learn how to build modern websites with animations, explore awwwards-winning or award-winning websites, and courses on website creation. Master web technologies like Node.js, MongoDB, Socket.io, and databases such as DBMS. Dive into programming with Java, C, Python, and explore data analysis, blockchain, CPT, aptitude, HTML, CSS, and JavaScript for a comprehensive learning experience in modern web technologies.">
+  <meta name="keywords" content="modern web technologies, animations, award-winning websites, Node.js, MongoDB, Socket.io, DBMS, Java, C, Python, data analysis, blockchain, CPT, aptitude, HTML, CSS, JavaScript">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.sheryians.com">
+
+  <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <title>
+    Sign In
+  </title>
+  <link rel="apple-touch-icon" sizes="57x57" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="/static/common.css">
+
+  <script defer>
+    function hidePreLoader() {
+      document.querySelector('#preLoder').style.opacity = '0'
+      setTimeout(() => {
+        document.querySelector('#preLoder').style.display = 'none'
+      }, 500);
+    }
+
+    function observeAndCallback(element, callback, options) {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            callback(entry.target); // Run the callback when the element is intersecting
+            observer.disconnect(); // Disconnect the observer after the callback is executed
+          }
+        });
+      }, options);
+
+      observer.observe(element);
+    }
+
+    function applyLazyLoading() {
+      document.querySelectorAll('[load-lazy]').forEach(lazyLoadingElement => {
+
+        function callbackFunction() {
+          const src = lazyLoadingElement.getAttribute('load-lazy')
+          lazyLoadingElement.removeAttribute('load-lazy')
+          lazyLoadingElement.setAttribute('src', src)
+        }
+
+        observeAndCallback(lazyLoadingElement, callbackFunction, {
+          threshold: 0.5
+        });
+      })
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+
+      applyLazyLoading()
+    })
+  </script>
+
+  <link href='https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css' rel='stylesheet' />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css">
+  <link rel="stylesheet" href="/static/signin.css">
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfLnMgoAAAAACX381IW885MK0P1zQvRVxj0iE03"></script>
+
+  </head>
+
+  <body>
+    <main>
+      <section class="view" id="view1">
+        <div class="form">
+          <div class="top">
+            <h1>Sign In</h1>
+            <div class="user-type">
+              <p class="newUserTag active" onclick="showNewUser(this)">Phone</p>
+              <p class="oldUserTag" onclick="showOldUser(this)">Email</p>
+            </div>
+          </div>
+          <div class="bottom">
+            <form class="oldUser" action="/signIn/auth-user" method="post"
+              id="loginForm">
+              <div class="form-group">
+                <label for="email">
+                  Email address
+                </label>
+                <input placeholder="Enter your email address" type="text" id="email" name="email">
+              </div>
+              <div class="form-group">
+                <label for="password">
+                  Password
+                </label>
+                <div class="passwordInput">
+                  <input placeholder="Enter your password here" type="password" id="password" name="password">
+                  <div class="eye-icon toogle-visibility">
+                    <i class="hide-password ri-eye-close-line"></i>
+                    <i class="show-password ri-eye-line"></i>
+                  </div>
+                </div>
+                <div class="invalid-message">
+                </div>
+
+              </div>
+              <button class="btn btn-primary" id="loginButton">Continue</button>
+            </form>
+            <div class="newUser forms">
+              <div id="basic" class="details">
+                <div class="inputfield">
+                  <i style="visibility: hidden;" class="ri-arrow-left-line"></i>
+                </div>
+                <div class="inputfield">
+                  <label for="ContactNumber">Mobile Number *</label>
+                  <div class="container">
+                    <!-- <input id="phoneNumber" type="tel" name="phone" placeholder="Enter Your Mobile Number"
+                    maxlength="10" inputmode="numeric" /> -->
+                    <input id="phoneNumber" type="text" name="phoneNumber" placeholder="Enter Your Mobile Number"
+                      maxlength="10" inputmode="numeric" pattern="[0-9]*"
+                      oninput="this.value = this.value.replace(/[^0-9]/g, '');" />
+                  </div>
+                  <small id="contactNumberValidation"></small>
+                </div>
+                <input type="hidden" id="recaptchaToken" name="recaptchaToken">
+              </div>
+              <div id="otp-verification" class="details">
+                <div class="loader-container">
+                  <div class="loader">
+                    <div class="progress" id="progress"></div>
+                  </div>
+                </div> 
+                <h2>OTP Verification</h2>
+                <div class="inputfield">
+                  <label style="text-align: center;" for="otp">Enter the OTP sent to +91 - <span
+                      id="otp-mobile-number"></span> <span style="text-decoration: underline;" id="edit-mobile-number"
+                      onclick="editNumber()">
+                      <i class="ri-pencil-line"></i>
+                      edit
+                    </span>
+                  </label>
+                  <div class="otp-container" id="otp-container">
+                    <input inputmode="numeric" autocomplete="off" type="text" maxlength="1" class="otp-input" id="digit1">
+                    <input inputmode="numeric" autocomplete="off" type="text" maxlength="1" class="otp-input" id="digit2">
+                    <input inputmode="numeric" autocomplete="off" type="text" maxlength="1" class="otp-input" id="digit3">
+                    <input inputmode="numeric" autocomplete="off" type="text" maxlength="1" class="otp-input" id="digit4">
+                  </div>
+                  <p id="otpErrorMessage"> </p>
+                  <p id="resend-otp"><span id="resend-otp-text">Resend OTP in</span> <span class="timer">0:30</span></p>
+                  
+                  
+                </div>
+              </div>
+              
+            </div>
+
+            <div class="devider">
+              <div></div>
+              <p>Or</p>
+              <div></div>
+            </div>
+
+            <div class="strategies">
+              <a href="/signIn/google" class="btn strategy">
+                <img
+                  src="data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M17.4612 7.21757H16.751V7.18098H8.81632V10.7075H13.7989C13.072 12.7604 11.1187 14.234 8.81632 14.234C5.89503 14.234 3.52653 11.8655 3.52653 8.94425C3.52653 6.02296 5.89503 3.65446 8.81632 3.65446C10.1648 3.65446 11.3916 4.16316 12.3257 4.9941L14.8194 2.5004C13.2448 1.03292 11.1385 0.12793 8.81632 0.12793C3.94751 0.12793 0 4.07544 0 8.94425C0 13.8131 3.94751 17.7606 8.81632 17.7606C13.6851 17.7606 17.6326 13.8131 17.6326 8.94425C17.6326 8.35311 17.5718 7.77609 17.4612 7.21757Z' fill='%23FFC107' /%3E%3Cpath d='M1.0166 4.84069L3.9132 6.96498C4.69697 5.02451 6.59513 3.65446 8.8164 3.65446C10.1649 3.65446 11.3916 4.16316 12.3257 4.9941L14.8194 2.5004C13.2448 1.03292 11.1386 0.12793 8.8164 0.12793C5.43005 0.12793 2.49333 2.03975 1.0166 4.84069Z' fill='%23FF3D00' /%3E%3Cpath d='M8.8165 17.7612C11.0938 17.7612 13.1629 16.8897 14.7274 15.4725L11.9988 13.1635C11.0839 13.8593 9.96591 14.2356 8.8165 14.2347C6.52338 14.2347 4.57629 12.7725 3.84278 10.7319L0.967773 12.947C2.42687 15.8022 5.39004 17.7612 8.8165 17.7612Z' fill='%234CAF50' /%3E%3Cpath d='M17.4612 7.21823H16.7511V7.18164H8.81641V10.7082H13.7989C13.4512 11.6852 12.8249 12.539 11.9973 13.164L11.9987 13.1631L14.7273 15.4721C14.5342 15.6475 17.6327 13.3531 17.6327 8.9449C17.6327 8.35377 17.5719 7.77674 17.4612 7.21823Z' fill='%231976D2' /%3E%3C/svg%3E%0A"
+                  alt="google">
+                <span>Continue with Google</span>
+              </a>
+              <a class="create" href="/signup/newuser">
+                <i class="ri-user-add-line"></i>
+                <span>Create a New Account</span>
+              </a>
+              <!-- <a href="/signIn/forgot-password" class="forgot">Forgot Password?</a> -->
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script defer src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+
+    <script>
+      // Optional: Handle validation or retrieve the number
+      
+      document.getElementById("loginForm").addEventListener("submit", async (e) => {
+        e.preventDefault(); // Prevent the default form submission (reload)
+
+        const formData = new FormData(e.target);
+        const loginData = Object.fromEntries(formData.entries());
+        try {
+          const response = await fetch('/signin/auth-user', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(loginData),
+          });
+          const result = await response.json();
+          if (response.ok) {
+            // Redirect to the intended page on successful login
+            window.location.href = result.redirectUrl;
+          } else {
+            // Show error message
+            document.querySelector(".invalid-message").innerText = result.message;
+          }
+        } catch (err) {
+          console.log("Error logging in:", err);
+          document.getElementById("invalid-message").innerText = "An error occurred. Please try again.";
+        }
+      });
+
+
+      function editNumber(){
+        document.getElementById('phoneNumber').focus()
+        document.querySelector(".newUser").style.height = "12rem"
+      }
+      // function validateEmail(email) {
+      //   const re =
+      //     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+      //   return re.test(String(email).toLowerCase());
+      // }
+
+      // function toggleInvalidClass(isValid, selector) {
+      //   var element = document.querySelector(selector);
+      //   if (!isValid) {
+      //     element.closest('.form-group').classList.add('invalid');
+      //   } else {
+      //     element.closest('.form-group').classList.remove('invalid');
+      //   }
+      // }
+
+      // const loginForm = document.getElementById('loginForm');
+      // const loginButton = document.getElementById('loginButton');
+      // const username = document.getElementById('email');
+      var passwordInput = document.querySelector('#password');
+      var toggleVisibility = document.querySelector('.toogle-visibility');
+
+      toggleVisibility.addEventListener('click', function() {
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+        } else {
+          passwordInput.type = "password";
+        }
+      });
+
+      // function validateForm(submitEvent) {
+
+      //   const isValidEmail = validateEmail(document.querySelector('#email').value)
+      //   const isValidPassword = document.querySelector('#password').value.length > 0
+
+      //   toggleInvalidClass(isValidEmail, '#email');
+      //   toggleInvalidClass(isValidPassword, '#password');
+      // }
+
+      // async function handleSubmit(e) {
+      //   validateForm(e)
+      // }
+
+
+      // loginForm.addEventListener('submit', function(event) {
+      //   if (!username.value.trim()) {
+
+      //     username.classList.add('error');
+      //     event.preventDefault()
+      //     return
+      //   }
+      //   if (!password.value.trim()) {
+      //     passwordErr.style.opacity = 1;
+      //     passwordErr.style.display = "block";
+      //     password.classList.add('error');
+      //     event.preventDefault()
+      //     return
+      //   }
+      //   // Disable the login button to prevent multiple submissions
+      //   loginButton.disabled = true;
+      // });
+
+      const contactNumberValidation = document.getElementById('contactNumberValidation');
+      const otpErrorMessage = document.getElementById('otpErrorMessage');
+      const indianMobileNumberRegex = /^(\+91|91)[6-9]\d{9}$/;
+
+      const sendOTP = async (phoneNumber) => {
+        const response = await fetch('/signup/send-login-otp', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ phoneNumber }),
+        });
+        const data = await response.json();
+        return data;
+      };
+
+      let interval; // Declare interval in the outer scope
+
+      // Function to start the timer for OTP resend
+      const startTimer = () => {
+        stopTimer();
+        let time = 30;
+        const timer = document.querySelector('.timer');
+        const resendOTP = document.getElementById('resend-otp');
+        const resendOTPText = document.getElementById('resend-otp-text');
+        resendOTP.style.pointerEvents = 'none';
+        resendOTP.style.cursor = 'not-allowed';
+        resendOTPText.textContent = 'Resend OTP in';
+        interval = setInterval(() => {
+          time -= 1;
+          timer.textContent = `0:${time < 10 ? `0${time}` : time}`;
+          if (time === 0) {
+            clearInterval(interval);
+            resendOTP.style.cursor = 'pointer';
+            resendOTP.style.pointerEvents = 'auto';
+            timer.textContent = '';
+            resendOTPText.textContent = 'Resend OTP';
+          }
+        }, 1000);
+      };
+
+      // Function to stop the timer for OTP resend and clear the timer function
+      const stopTimer = () => {
+        const timer = document.querySelector('.timer');
+        timer.textContent = '';
+        clearInterval(interval); // Clear the interval
+      };
+
+      document.getElementById('resend-otp').addEventListener('click', async () => {
+        const timer = document.querySelector('.timer');
+        const phoneNumber = '+91' + document.getElementById('phoneNumber').value;
+        if (timer.textContent === '') {
+          const response = await fetch('/signup/resend-login-otp', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ phoneNumber }),
+          });
+          const data = await response.json();
+          if (!data.message == 'success') {
+            document.getElementById('otpErrorMessage').textContent = data.reason || 'Error while sending OTP';
+          }
+          // clear the OTP input fields
+          document.querySelectorAll('.otp-input').forEach((input) => {
+            input.value = '';
+          });
+          document.getElementById('digit1').focus();
+          resetOTPInput();
+          document.getElementById('otpErrorMessage').textContent = '';
+          startTimer();
+        }
+      });
+
+
+      function validateOTP(otp) {
+        updateLoader()
+        const phoneNumber = '+91' + document.getElementById('phoneNumber').value;
+
+        fetch('/signup/verify-login-otp', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ phoneNumber, otp }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.message === 'success') {
+              setOTPInput("sucess")
+              document.querySelector("#resend-otp").style.color = 'var(--accent-color)'
+              document.querySelector("#resend-otp").innerHTML = "Signing you in..."
+              // Proceed to the next step
+              window.location.href = data.redirectTo || '/';
+            } else {
+              setOTPInput("error")
+              resetLoader()
+              console.log(document.querySelector("#digit4").focus())
+              otpErrorMessage.textContent = data.reason || 'Invalid OTP';
+            }
+          })
+          .catch((error) => {
+            console.error('Error verifying OTP:', error);
+            otpErrorMessage.textContent = 'An error occurred. Please try again.';
+          }).finally(() => {
+            resetLoader()
+          });
+      }
+
+
+
+      // OTP input fields auto focus and backspace, paste functionality
+      const otpInputs = document.querySelectorAll('.otp-input');
+
+      otpInputs.forEach((input, index) => {
+        input.style.border = "1px solid transparent";
+
+        input.addEventListener('input', (e) => {
+          // Allow only digits
+          resetOTPInput()
+          resetLoader()
+          input.value = input.value.replace(/[^0-9]/g, '');
+
+          // Move to next input if a digit is entered
+          if (input.value.length === 1 && index < otpInputs.length - 1) {
+            otpInputs[index + 1].focus();
+          }
+
+          // Collect the OTP from all inputs
+          const otp = Array.from(otpInputs).map((input) => input.value).join('');
+
+          // If all digits are entered, validate the OTP
+          if (otp.length === otpInputs.length) {
+            validateOTP(otp);
+          }
+        });
+
+        // Handle backspace to move focus to the previous input
+        input.addEventListener('keydown', (e) => {
+          if (e.key === 'Backspace' && input.value === '' && index > 0) {
+            otpInputs[index - 1].focus();
+          }
+        });
+
+        // Handle paste event
+        input.addEventListener('paste', (e) => {
+          e.preventDefault();
+          const pasteData = e.clipboardData.getData('text').replace(/\D/g, '');
+          const digits = pasteData.split('');
+          otpInputs.forEach((input, idx) => {
+            input.value = digits[idx] || '';
+          });
+
+          // Focus the next input or the last one
+          const nextInputIndex = digits.length < otpInputs.length ? digits.length : otpInputs.length - 1;
+          otpInputs[nextInputIndex].focus();
+
+          // Collect the OTP from all inputs
+          const otp = Array.from(otpInputs).map((input) => input.value).join('');
+
+          // If all digits are entered, validate the OTP
+          if (otp.length === otpInputs.length) {
+            validateOTP(otp);
+          }
+        });
+      });
+
+      // check email validation while typing
+
+      // Debounce function to limit the rate of function calls
+      function debounce(func, delay) {
+        let debounceTimer;
+        return function (...args) {
+          const context = this;
+          clearTimeout(debounceTimer);
+          debounceTimer = setTimeout(() => func.apply(context, args), delay);
+        };
+      }
+
+      // Event listener for email input
+
+
+      const phoneNumberInput = document.getElementById('phoneNumber');
+      // Event listener for phone number input
+      phoneNumberInput.addEventListener('input', debounce(async function (e) {
+        const value = e.target.value.trim();
+
+        if (value.length != 10) {
+          return;
+        }
+
+        const formattedNumber = `+91${value}`;
+
+        // Validate phone number format (10 digits)
+        if (indianMobileNumberRegex.test(formattedNumber)) {
+          contactNumberValidation.textContent = 'Checking phone number availability...';
+          contactNumberValidation.style.color = 'white';
+
+          try {
+            const response = await fetch('/signup/check-phone-number', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ phoneNumber: formattedNumber }),
+            });
+
+            const data = await response.json();
+
+            if (data.message == 'success') {
+              contactNumberValidation.textContent = data.reason || 'Error checking phone number';
+              contactNumberValidation.style.color = 'var(--error-color)';
+            } else {
+              contactNumberValidation.textContent = '';
+              setTimeout(() => {
+                document.querySelector('#otp-verification').scrollIntoView({ behavior: 'smooth' });
+              }, 20);
+              document.querySelector(".newUser").style.height = "12rem"
+              contactNumberValidation.textContent = '';
+              // clear the OTP input fields
+              document.querySelectorAll('.otp-input').forEach((input) => {
+                input.value = '';
+              });
+              document.querySelector('.otp-input').focus();
+              document.getElementById('otpErrorMessage').textContent = '';
+              document.getElementById('otp-mobile-number').textContent = value;
+              document.getElementById('digit1').focus();
+              startTimer();
+              sendOTP(formattedNumber).then((data) => {
+                if (!data.message == 'success') {
+                  contactNumberValidation.textContent = data.reason || 'Error while sending OTP';
+                }
+              });
+            }
+          } catch (error) {
+            console.error('Error checking phone number:', error);
+            contactNumberValidation.textContent = 'Error checking phone number';
+            contactNumberValidation.style.color = 'var(--error-color)';
+          }
+        } else {
+          contactNumberValidation.textContent = 'Invalid phone number';
+          contactNumberValidation.style.color = 'var(--error-color)';
+        }
+      }, 500)); // Adjust the delay as needed (e.g., 500 milliseconds)
+
+
+      function showNewUser(event) {
+        event.classList.add("active")
+        document.querySelector(".newUser").style.display = "flex"
+        document.querySelector(".oldUser").style.display = "none"
+        document.querySelector(".oldUserTag").classList.remove("active")
+      }
+
+      function showOldUser(event) {
+        event.classList.add("active")
+        document.querySelector(".newUser").style.display = "none"
+        document.querySelector(".oldUser").style.display = "block"
+        document.querySelector(".newUserTag").classList.remove("active")
+      }
+
+      let progress = 0;
+      const progressBar = document.getElementById("progress");
+      const percentageDisplay = document.getElementById("percentage");
+      let timeout;
+
+      function updateLoader() {
+        document.querySelectorAll(".otp-input").forEach((input) => {
+          input.disabled = true;
+          input.style.cursor = "not-allowed";
+          input.style.opacity = "0.5";
+        });
+      }
+
+      function resetLoader() {
+        console.log("challa")
+        document.querySelectorAll(".otp-input").forEach((input) => {
+          input.disabled = false;
+          input.style.cursor = "text";
+          input.style.opacity = "1";
+         
+        });
+      }
+
+      function setOTPInput(type){
+        if(type == "error"){
+          document.querySelectorAll(".otp-input").forEach((input) => {
+            input.style.border = "1px solid var(--error-color)";
+          });
+        }else{
+          document.querySelectorAll(".otp-input").forEach((input) => {
+            input.style.border = "1px solid green";
+          });
+        }
+      }
+      
+      function resetOTPInput() {
+        document.querySelectorAll(".otp-input").forEach((input) => {
+          input.style.border = "1px solid transparent";
+          document.querySelector("#otpErrorMessage").textContent = "";
+        });
+      }
+
+    </script>
+
+
+    </main>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
+<nav>
+  
+  <div class="header">
+   
+    <div
+      style="gap: 0.624em;"
+      class="left"
+      onclick="window.location.href='/'"
+    >
+      <img
+        src="https://ik.imagekit.io/sheryians/Sheryians_logo_EzwgcppnD"
+        alt=""
+      >
+      <!-- <div style="height:1.8em; width:1px; background-color:white; display: inline-block; vertical-align: middle;"></div> -->
+      <span style="margin-top: 0.2em;">Sheryians coding school</span>
+    </div>
+    <div class="right">
+      <a
+        href="/"
+        class="nav-item"
+      >
+        <span>Home</span>
+      </a>
+      <a
+        href="/courses"
+        class="nav-item"
+      >
+        <span>Courses</span>
+      </a>
+      <a
+        href="/kodr"
+        class="nav-item"
+      >
+        <span>Bootcamp(Kodr)</span>
+      </a>
+
+      <button
+        onclick="openRequestCallback()"
+        class="nav-item mobile-item request-callback"
+      >
+        <i class="ri-phone-line"></i>
+        <span>
+          Request Callback
+        </span>
+      </button>
+
+      
+
+
+
+      <button class="nav-item  auth-user ">
+
+        
+        <a
+          href="/signin"
+          class="btn btn-primary sign-in"
+        >
+          Sign In
+        </a>
+        
+      </button>
+
+      <button class="menu nav-item">
+        <div class="menu-toggle">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+        </div>
+
+        <div class="menu-panel">
+          <div class="menu-header">
+            <h1>Menu</h1>
+          </div>
+          <div class="menu-items">
+            <a
+              href="/"
+              class="nav-item menu-item mobile-item"
+            >Home</a>
+            <a
+              href="/courses"
+              class="nav-item menu-item mobile-item"
+            >Courses</a>
+            <a
+              href="/kodr"
+              class="nav-item menu-item mobile-item"
+            >Bootcamp(Kodr)</a>
+            <!-- <a href="https://reimagine.sheryians.com" class="nav-item menu-item mobile-item">Re-Imagine</a> -->
+            
+            
+            <a
+              href="/signin"
+              class="nav-item menu-item mobile-item"
+            >Sign In</a>
+
+            
+          </div>
+        </div>
+
+      </button>
+
+    </div>
+
+
+
+
+    <script defer>
+      let lastTime = 0;
+      let maxFPS = 60; // Change this value to set the maximum FPS
+      let direction = 1
+
+      const nav = document.querySelector('nav');
+      let lastScrollY = window.scrollY;
+      let navRect = null;
+
+      function navPosition(timestamp) {
+        if (!lastTime) {
+          lastTime = timestamp;
+        }
+        const elapsed = timestamp - lastTime;
+        if (elapsed > (1000 / maxFPS)) {
+          lastTime = timestamp;
+
+
+
+          if (navRect) {
+            if (direction === 1 && window.scrollY > 0) {
+              nav.style.transform = `translateY(-${navRect.height}px)`;
+            } else {
+              nav.style.transform = `translateY(0px)`;
+            }
+          } else {
+            navRect = nav.getBoundingClientRect();
+          }
+
+          if (lastScrollY > window.scrollY) {
+            direction = -1;
+          }
+
+          if (lastScrollY < window.scrollY) {
+            direction = 1;
+          }
+          lastScrollY = window.scrollY;
+
+
+
+        }
+        requestAnimationFrame(navPosition);
+      }
+      requestAnimationFrame(navPosition);
+
+
+      if (document.querySelector('.notification-toggle')) {
+        document.querySelector('.notification-toggle').addEventListener('click', () => {
+          document.querySelector('.notification-panel').classList.toggle('show');
+        });
+
+        document.querySelector('.remove-notification-panel').addEventListener('click', () => {
+          document.querySelector('.notification-panel').classList.remove('show');
+        });
+      }
+
+
+      document.querySelector('.menu-toggle').addEventListener('click', function () {
+        if (this.classList.contains('menu-show')) {
+          this.classList.add('menu-close')
+        } else {
+          this.classList.remove('menu-close')
+        }
+        this.classList.toggle('menu-show')
+
+      })
+
+      function handleImageError(e) {
+        document.querySelector(".text-profile-initial").innerHTML = "A"
+        document.querySelector(".text-profile-initial").style.backgroundColor = "var(--accent-color)"
+        document.querySelector(".text-profile-initial").style.display = "flex"
+        document.querySelector(".text-profile-initial").style.justifyContent = "center"
+        document.querySelector(".text-profile-initial").style.alignItems = "center"
+      }
+    </script>
+  </div>
+
+  <section class="popup request-callback">
+    <div class="bg" onclick="closePopup()"></div>
+    <div class="center">
+      <div class="text">
+        <h3>Request a callback</h3>
+        <small>Fill the form below to request a callback from our team.</small>
+        <form
+          action="/request-callback"
+          method="POST"
+          onsubmit="requestCallback(event)"
+        >
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+              required
+            >
+            <span class="error">Invalid Name</span>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input
+              type="tel"
+              name="contact"
+              id="phone"
+              placeholder="Phone"
+              required
+            >
+            <span class="error">Invalid Phone</span>
+          </div>
+          <div class="form-group">
+            <label for="datetime-request-callback">Select Date and Time
+              <i class="ri-calendar-line"></i>
+            </label>
+            <input
+              type="datetime-local"
+              name="datetime"
+              id="datetime-request-callback"
+              required
+              value="2024-12-19T13:30"
+            >
+            <span class="error">Invalid Date and Time</span>
+          </div>
+          <div class="form-group submit">
+            <button
+              type="submit"
+              class="btn btn-primary"
+              style="width: 100%; background-color: var(--accent-color); color: black;"
+            >Submit</button>
+          </div>
+        </form>
+      </div>
+      <div onclick="closePopup()" class="closePopup">
+        <i class="ri-close-circle-line"></i>
+      </div>
+    </div>
+  </section>
+  <section
+    onclick="closePopup()"
+    class="popup discordJoinPopup"
+  >
+    <div class="center">
+      <div class="images">
+        <img
+          src="/Sheryians_Logo_wFKd9VClG.png"
+          alt=""
+        >
+        <i class="ri-add-line"></i>
+        <img
+          src="/images/discord/discord.png"
+          alt=""
+        >
+      </div>
+      <div class="text">
+        <h3>
+          Authorize discord to access course support
+        </h3>
+        <small> in order to access our course support channel on the discord you have to authorize us from the discord.
+        </small>
+
+        <div class="buttons">
+          <button class="cancel">Cancel</button>
+          <button
+            onclick="window.open('/classroom/joinChannel/channle/role')"
+            class="authorize"
+          >Authorize</button>
+        </div>
+
+      </div>
+      <div
+        onclick="closeDiscordPopup()"
+        class="closePopup"
+      >
+        <i class="ri-close-circle-line"></i>
+      </div>
+    </div>
+  </section>
+</nav>
+<script
+  defer
+  src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+  integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+<script>
+  // Initialize the intl-tel-input for the phone input
+    const phnInp = document.getElementById("phone");
+    const iti = intlTelInput(phnInp, {
+      initialCountry: "IN",
+      utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js", // For number formatting
+    });
+
+    // Add validation before form submission
+</script>
+
+<script defer>
+  function lazyLoadImages(attribute) {
+    const lazyImages = document.querySelectorAll(`[${attribute}]`);
+
+    const options = {
+      root: null, // viewport
+      rootMargin: '0px',
+      threshold: 0.1 // load when 10% of the image is visible
+    };
+
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.lazySrc;
+          img.removeAttribute('data-lazy-src');
+          observer.unobserve(img);
+        }
+      });
+    }, options);
+
+    lazyImages.forEach(image => {
+      imageObserver.observe(image);
+    });
+  }
+  async function openNotification(link, id) {
+    try {
+      axios.post("/classroom/notifications/update", {
+        notificationId: id
+      })
+      window.location.href = link
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  function renderTimeSinceDate() {
+    document.querySelectorAll(".notifications small").forEach((elem) => {
+      elem.textContent = timeSince(new Date(elem.getAttribute('data-time')))
+    })
+  }
+
+  function timeSince(date) {
+    // Get the current date
+    const now = new Date();
+
+    // Calculate the difference in milliseconds
+    const difference = now.getTime() - date.getTime();
+
+    // Handle negative difference (future date)
+    if (difference < 0) {
+      return "Date in the future";
+    }
+
+    // Calculate days and months
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const months = Math.floor(days / 30);
+
+    // Determine unit (days or months)
+    const unit = months >= 1 ? "months" : "days";
+    const value = months >= 1 ? months : days;
+
+    // Format the output string
+    const output = `${value} ${unit} ago`;
+
+    return output;
+  }
+
+
+  async function joinDiscord(channel_id, role_id, user_id) {
+    let response = await axios.post(`/classroom/is_user_in_guild/${user_id}`)
+    console.log(response)
+    const isUserInGuild = response.data.is_user_in_guild
+
+    if (!isUserInGuild) {
+      openDiscordPopup()
+      return
+    }
+
+    const currentLectureId = document.querySelector('.currentPlaying').getAttribute('data-lecture-id')
+    window.open(`/classroom/ticket/${currentLectureId}`)
+  }
+
+  async function enterDiscord(channel_id, role_id, user_id) {
+    let response = await axios.post(`/classroom/is_user_in_guild/${user_id}`)
+    const isUserInGuild = response.data.is_user_in_guild
+
+    if (!isUserInGuild) {
+      openDiscordPopup()
+      return
+    }
+
+    window.open(`/classroom/joinChannel/${channel_id}/${role_id}`)
+  }
+
+  function openDiscordPopup() {
+    document.querySelector('.discordJoinPopup').style.display = 'flex'
+    document.querySelector('.discordJoinPopup').classList.add('active')
+    document.querySelector('.discordJoinPopup').style.opacity = '1'
+    try {
+      if (lenis)
+        lenis.stop()
+    } catch (err) {
+
+    }
+  }
+
+
+
+  function closePopup() {
+    document.querySelectorAll('.popup').forEach(pop => {
+      pop.classList.remove('active')
+      pop.style.display = 'none'
+      pop.style.opacity = '0'
+    })
+
+    try {
+      if (lenis)
+        lenis.start()
+    } catch (er) {
+
+    }
+  }
+
+
+  function openRequestCallback() {
+    const requestCallback = document.querySelector('.popup.request-callback')
+    requestCallback.style.display = 'flex'
+    requestCallback.classList.add('active')
+    requestCallback.style.opacity = '1'
+  }
+
+  function requestCallback(event) {
+    event.preventDefault()
+
+    console.log(event.target)
+
+    const nameInput = event.target.querySelector('#name');
+    const phoneInput = event.target.querySelector('#phone');
+    const datetimeInput = event.target.querySelector('#datetime-request-callback');
+
+    let isValid = true;
+
+    if (!nameInput.value.trim()) {
+      nameInput.classList.add('error');
+      isValid = false;
+    } else {
+      nameInput.classList.remove('error');
+    }
+
+    if (!iti.isValidNumber()) {
+      phoneInput.classList.add('error');
+      isValid = false;
+    } else {
+      phoneInput.classList.remove('error');
+    }
+
+    if (!datetimeInput.value.trim()) {
+      datetimeInput.classList.add('error');
+      isValid = false;
+    } else {
+      datetimeInput.classList.remove('error');
+    }
+
+    if (!isValid) {
+      return;
+    }
+
+    const form = event.target
+    const data = new FormData(form)
+    console.log(iti.getNumber())
+    axios.post(form.action, {
+      name: data.get('name'),
+      contact: iti.getNumber(),
+      datetime: data.get('datetime')
+    }).then((response) => {
+      console.log(response)
+      closePopup()
+    }).catch((err) => {
+      console.log(err)
+    })
+  }
+
+
+
+  lazyLoadImages('data-lazy-src')
+  lazyLoadImages('srcset')
+</script>
+
+<script>
+  const phoneNumber = document.getElementById('phoneNumber');
+  const contactNumberValidation1 = document.getElementById('contactNumberValidation');
+  const otpErrorMessage1 = document.getElementById('otpErrorMessage');
+  const email = ''
+  const indianMobileNumberRegex1 = /^(\+91|91)[6-9]\d{9}$/;
+
+  const send_OTP = async (phoneNumber) => {
+    const response = await fetch('/signup/send-otp', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ phoneNumber }),
+    });
+    const data = await response.json();
+    return data;
+  };
+
+  let interval1; // Declare interval in the outer scope
+
+  // Function to start the timer for OTP resend
+  const start_Timer = () => {
+    stopTimer();
+    let time = 30;
+    const timer = document.querySelector('.timer');
+    const resendOTP = document.getElementById('resend-otp');
+    const resendOTPText = document.getElementById('resend-otp-text');
+    resendOTP.style.pointerEvents = 'none';
+    resendOTP.style.cursor = 'not-allowed';
+    resendOTPText.textContent = 'Resend OTP in';
+    interval = setInterval(() => {
+      time -= 1;
+      timer.textContent = `0:${time < 10 ? `0${time}` : time}`;
+      if (time === 0) {
+        clearInterval(interval);
+        resendOTP.style.cursor = 'pointer';
+        resendOTP.style.pointerEvents = 'auto';
+        timer.textContent = '';
+        resendOTPText.textContent = 'Resend OTP';
+      }
+    }, 1000);
+  };
+
+  // Function to stop the timer for OTP resend and clear the timer function
+  const stop_Timer = () => {
+    const timer = document.querySelector('.timer');
+    timer.textContent = '';
+    clearInterval(interval); // Clear the interval
+  };
+
+  document.getElementById('resend-otp').addEventListener('click', async () => {
+      const timer = document.querySelector('.timer');
+      const phoneNumber = '+91' + document.getElementById('phoneNumber').value;
+      if (timer.textContent === '') {
+        const response = await fetch('/signup/resend-otp', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ phoneNumber }),
+        });
+        const data = await response.json();
+        if (!data.message == 'success') {
+          document.getElementById('otpErrorMessage').textContent = data.reason || 'Error while sending OTP';
+        }
+        // clear the OTP input fields
+        document.querySelectorAll('.otp-input').forEach((input) => {
+          input.value = '';
+        });
+        document.getElementById('digit1').focus();
+        resetOTPInput();
+        document.getElementById('otpErrorMessage').textContent = '';
+        startTimer();
+      }
+    });
+    
+  function disableOTPInputsAndStartTimer(){
+    const otpInputs = document.querySelectorAll('.otp-input');
+    otpInputs.forEach((input) => {
+      input.disabled = true;
+      input.opacity = 0.5;
+    });
+    // startTimer();
+  }
+
+  function validateOTP(otp) {
+    updateLoader()
+    const phoneNumber = '+91' + document.getElementById('phoneNumber').value;
+    disableOTPInputsAndStartTimer();
+    fetch('/signup/verify-account', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ phoneNumber, otp,email }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.message === 'success') {
+          // Proceed to the next step
+          setOTPInput("success")
+          document.querySelector(".phoneNumberPopup").remove()
+        } else {
+          setOTPInput("error")
+          otpErrorMessage.textContent = data.reason || 'Invalid OTP';
+        }
+      })
+      .catch((error) => {
+        console.error('Error verifying OTP:', error);
+        otpErrorMessage.textContent = 'An error occurred. Please try again.';
+      }).finally(() => {
+        resetLoader()
+      });
+  }
+
+
+
+  // OTP input fields auto focus and backspace, paste functionality
+  const otp_Inputs = document.querySelectorAll('.otp-input');
+
+    otpInputs.forEach((input, index) => {
+      document.querySelectorAll(".otp-input").forEach((inp)=>{
+        inp.style.border = "1px solid transparent";
+      })
+      input.addEventListener('input', (e) => {
+        // Allow only digits
+        input.value = input.value.replace(/[^0-9]/g, '');
+
+        // Move to next input if a digit is entered
+        if (input.value.length === 1 && index < otpInputs.length - 1) {
+          otpInputs[index + 1].focus();
+        }
+
+        // Collect the OTP from all inputs
+        const otp = Array.from(otpInputs).map((input) => input.value).join('');
+
+        // If all digits are entered, validate the OTP
+        if (otp.length === otpInputs.length) {
+          validateOTP(otp);
+        }
+      });
+
+      // Handle backspace to move focus to the previous input
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Backspace' && input.value === '' && index > 0) {
+          otpInputs[index - 1].focus();
+        }
+      });
+
+      // Handle paste event
+      input.addEventListener('paste', (e) => {
+        e.preventDefault();
+        const pasteData = e.clipboardData.getData('text').replace(/\D/g, '');
+        const digits = pasteData.split('');
+        otpInputs.forEach((input, idx) => {
+          input.value = digits[idx] || '';
+        });
+
+        // Focus the next input or the last one
+        const nextInputIndex = digits.length < otpInputs.length ? digits.length : otpInputs.length - 1;
+        otpInputs[nextInputIndex].focus();
+
+        // Collect the OTP from all inputs
+        const otp = Array.from(otpInputs).map((input) => input.value).join('');
+
+        // If all digits are entered, validate the OTP
+        if (otp.length === otpInputs.length) {
+          validateOTP(otp);
+        }
+      });
+    });
+    
+    // check email validation while typing
+
+    // Debounce function to limit the rate of function calls
+    function debounce(func, delay) {
+      let debounceTimer;
+      return function (...args) {
+        const context = this;
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => func.apply(context, args), delay);
+      };
+    }
+
+    // Event listener for email input
+
+
+    const phoneNumber_Input = document.getElementById('phoneNumber');
+    // Event listener for phone number input
+    phoneNumberInput.addEventListener('input', debounce(async function (e) {
+        const value = e.target.value.trim();
+
+        if(value.length != 10) {
+          return;
+        }
+
+        const formattedNumber = `+91${value}`;
+
+        // Validate phone number format (10 digits)
+        if (indianMobileNumberRegex.test(formattedNumber)) {
+          contactNumberValidation.textContent = 'Checking phone number availability...';
+          contactNumberValidation.style.color = 'white';
+
+          try {
+            const response = await fetch('/signup/check-phone-number', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ phoneNumber: formattedNumber }),
+            });
+
+            const data = await response.json();
+
+            if (data.message !== 'success') {
+              contactNumberValidation.textContent = data.reason || 'Error checking phone number';
+              contactNumberValidation.style.color = 'var(--error-color)';
+            } else {
+              contactNumberValidation.textContent = '';
+              setTimeout(() => {
+                document.querySelector('#otp-verification').scrollIntoView({ behavior: 'smooth' });
+              }, 0);
+              // clear the OTP input fields
+              document.querySelectorAll('.otp-input').forEach((input) => {
+                input.value = '';
+              });
+              document.querySelector('.otp-input').focus();
+              resetOTPInput();
+              document.getElementById('otpErrorMessage').textContent = '';
+
+              contactNumberValidation.textContent = '';
+              document.getElementById('otp-mobile-number').textContent = value;
+              startTimer();
+              sendOTP(formattedNumber).then((data) => {
+                if (!data.message == 'success') {
+                  contactNumberValidation.textContent = data.reason || 'Error while sending OTP';
+                }
+              });
+            }
+          } catch (error) {
+            console.error('Error checking phone number:', error);
+            contactNumberValidation.textContent = 'Error checking phone number';
+            contactNumberValidation.style.color = 'var(--error-color)';
+          }
+        } else {
+          contactNumberValidation.textContent = 'Invalid phone number';
+          contactNumberValidation.style.color = 'var(--error-color)';
+        }
+      }, 500)); // Adjust the delay as needed (e.g., 500 milliseconds)
+
+      function updateLoader() {
+        document.querySelectorAll(".otp-input").forEach((input) => {
+          input.disabled = true;
+          input.style.cursor = "not-allowed";
+          input.style.opacity = "0.5";
+        });
+      }
+
+      function resetLoader() {
+        document.querySelectorAll(".otp-input").forEach((input) => {
+          input.disabled = false;
+          input.style.cursor = "text";
+          input.style.opacity = "1";
+        });
+      }
+
+      function setOTPInput(type){
+        if(type == "error"){
+          document.querySelectorAll(".otp-input").forEach((input) => {
+            input.style.border = "1px solid var(--error-color)";
+          });
+        }else{
+          document.querySelectorAll(".otp-input").forEach((input) => {
+            input.style.border = "1px solid green";
+          });
+        }
+      }
+
+      function resetOTPInput(){
+        document.querySelectorAll(".otp-input").forEach((input) => {
+          input.style.border = "1px solid transparent";
+        });
+      }
+</script>
+
+</body>
+
+</html>

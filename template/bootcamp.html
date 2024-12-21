@@ -1,0 +1,1945 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='UTF-8' />
+  <meta name="description" content="Learn how to build modern websites with animations, explore awwwards-winning or award-winning websites, and courses on website creation. Master web technologies like Node.js, MongoDB, Socket.io, and databases such as DBMS. Dive into programming with Java, C, Python, and explore data analysis, blockchain, CPT, aptitude, HTML, CSS, and JavaScript for a comprehensive learning experience in modern web technologies.">
+  <meta name="keywords" content="modern web technologies, animations, award-winning websites, Node.js, MongoDB, Socket.io, DBMS, Java, C, Python, data analysis, blockchain, CPT, aptitude, HTML, CSS, JavaScript">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.sheryians.com">
+
+  <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <title>
+    bootcamp
+  </title>
+  <link rel="apple-touch-icon" sizes="57x57" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://ik.imagekit.io/sheryians/Sheryians_Logo_wFKd9VClG.png">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="/css/common.css">
+
+  <script defer>
+    function hidePreLoader() {
+      document.querySelector('#preLoder').style.opacity = '0'
+      setTimeout(() => {
+        document.querySelector('#preLoder').style.display = 'none'
+      }, 500);
+    }
+
+    function observeAndCallback(element, callback, options) {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            callback(entry.target); // Run the callback when the element is intersecting
+            observer.disconnect(); // Disconnect the observer after the callback is executed
+          }
+        });
+      }, options);
+
+      observer.observe(element);
+    }
+
+    function applyLazyLoading() {
+      document.querySelectorAll('[load-lazy]').forEach(lazyLoadingElement => {
+
+        function callbackFunction() {
+          const src = lazyLoadingElement.getAttribute('load-lazy')
+          lazyLoadingElement.removeAttribute('load-lazy')
+          lazyLoadingElement.setAttribute('src', src)
+        }
+
+        observeAndCallback(lazyLoadingElement, callbackFunction, {
+          threshold: 0.5
+        });
+      })
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+
+      applyLazyLoading()
+    })
+  </script>
+<link
+    rel="stylesheet"
+    href="/static/common.css"
+>
+<link
+    rel="stylesheet"
+    href="/static/bootcamp.css"
+>
+
+<script defer>
+    function hidePreLoader() {
+        document.querySelector('#preLoder').style.opacity = '0'
+        setTimeout(() => {
+            document.querySelector('#preLoder').style.display = 'none'
+        }, 500);
+    }
+
+    function observeAndCallback(element, callback, options) {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    callback(entry.target); // Run the callback when the element is intersecting
+                    observer.disconnect(); // Disconnect the observer after the callback is executed
+                }
+            });
+        }, options);
+
+        observer.observe(element);
+    }
+
+    function applyLazyLoading() {
+        document.querySelectorAll('[load-lazy]').forEach(lazyLoadingElement => {
+
+            function callbackFunction() {
+                const src = lazyLoadingElement.getAttribute('load-lazy')
+                lazyLoadingElement.removeAttribute('load-lazy')
+                lazyLoadingElement.setAttribute('src', src)
+            }
+
+            observeAndCallback(lazyLoadingElement, callbackFunction, {
+                threshold: 0.5
+            });
+        })
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+
+        applyLazyLoading()
+    })
+</script>
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+<link
+    rel="stylesheet"
+    href="/css/common.css"
+>
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"
+>
+
+<script defer="">
+    function hidePreLoader() {
+        document.querySelector('#preLoder').style.opacity = '0'
+        setTimeout(() => {
+            document.querySelector('#preLoder').style.display = 'none'
+        }, 500);
+    }
+
+    function observeAndCallback(element, callback, options) {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    callback(entry.target); // Run the callback when the element is intersecting
+                    observer.disconnect(); // Disconnect the observer after the callback is executed
+                }
+            });
+        }, options);
+
+        observer.observe(element);
+    }
+
+    function applyLazyLoading() {
+        document.querySelectorAll('[load-lazy]').forEach(lazyLoadingElement => {
+
+            function callbackFunction() {
+                const src = lazyLoadingElement.getAttribute('load-lazy')
+                lazyLoadingElement.removeAttribute('load-lazy')
+                lazyLoadingElement.setAttribute('src', src)
+            }
+
+            observeAndCallback(lazyLoadingElement, callbackFunction, {
+                threshold: 0.5
+            });
+        })
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+
+        applyLazyLoading()
+    })
+</script>
+<title>Java & DSA Domination.</title>
+</head>
+
+<body>
+
+    <div id="main">
+        <section
+            id="page1"
+            class="page"
+        >
+            <div class="left">
+                <div class="title">
+                    <h1>6 months In-House Bootcamp programme - Kodr.</h1>
+                </div>
+
+
+                <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                    <div class="activeSupport">
+                        Starts on: 11 Nov 2024
+                    </div>
+                    <div class="activeSupport">
+                        Placement assistance
+                        <img
+                            src="https://ik.imagekit.io/sheryians/Aptitude%20&amp;%20Reasoning/360_F_621906809_C9rwm43Z7HQzYnrbTfMhmeyznilVgRFk%201_84ajxxlmg.png"
+                            alt=""
+                        >
+                    </div>
+                </div>
+
+                <!-- <div class="activeSupport">
+                    Course Supports Active Updates <img
+                        src="https://ik.imagekit.io/sheryians/Aptitude%20&amp;%20Reasoning/360_F_621906809_C9rwm43Z7HQzYnrbTfMhmeyznilVgRFk%201_84ajxxlmg.png"
+                        alt=""
+                    >
+                </div> -->
+
+                <div class="price">
+                    <p>
+                        Price
+                        <span class="priceValue">
+                            <span>₹</span>
+                            59000
+                        </span>
+                        <span class="discount">[ 50,000 + 18% gst ]</span>
+
+                    </p>
+                </div>
+                <div class="buy">
+
+
+                    <br>
+                    
+                    <p
+                        style="opacity: 0.5;"
+                        class="buyNow"
+                    >Seats are full</p>
+                    
+
+                </div>
+
+
+
+
+            </div>
+            <div class="right">
+                <div id="playOverlay">
+                    <i
+                        id="playBtn"
+                        class="ri-play-circle-line"
+                    ></i>
+                    <img
+                        src="https://ik.imagekit.io/sheryians/kodr/IMG_2260_cuLdZRWxFY.JPG"
+                        alt=""
+                    >
+                </div>
+                <div id="embedded-promo">
+                    <iframe
+                        id="promo-video"
+                        width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/pOGLAlGCKFE?si=lp4FPHtxYbr_4sj6"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen=""
+                    ></iframe>
+                </div>
+                <!-- <div class="tags">
+                    <div class="tag">
+                        Bootcamp
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+        <section class="page outline">
+            <div class="text">
+                <h1>we believe in,</h1>
+                <h1><span class="key-highlight">Consistency.</span> <br> <span class="margin">No shortcuts.</span></h1>
+            </div>
+
+            <div class="key-points">
+                <h1 class="key-point">
+                    MERN Stack <span>
+                        <img
+                            src="https://ik.imagekit.io/sheryians/kodr/electro_RlngqJHDkh.png"
+                            alt=""
+                        >
+                    </span>
+                </h1>
+                <h1 class="key-point">
+                    Data Structures & Algorithm
+                    <span>
+                        <img
+                            src="https://ik.imagekit.io/sheryians/kodr/chad_idIwYgW6A.png"
+                            alt=""
+                        >
+                    </span>
+                </h1>
+                <h1 class="key-point">
+                    DBMS - SQL
+                    <span>
+                        <img
+                            src="https://ik.imagekit.io/sheryians/kodr/swag_SlmSZ5u28P.png"
+                            alt=""
+                        >
+                    </span>
+                </h1>
+                <h1 class="key-point">
+                    CORE CS Subjects
+                    <span>
+                        <img
+                            src="https://ik.imagekit.io/sheryians/kodr/gear_0FytxuYMLl.png"
+                            alt=""
+                        >
+                    </span>
+                </h1>
+                <h1 class="key-point">
+                    Placement Assistance
+                    <span>
+                        <img
+                            src="https://ik.imagekit.io/sheryians/kodr/money_hwiAve2ra.png"
+                            alt=""
+                        >
+                    </span>
+                </h1>
+            </div>
+
+        </section>
+
+        <section class="page non-stop">
+            <h1>Non-Stop</h1>
+            <h1 class="key-light">5 Hours</h1>
+            <h1>Coding <span>[ Everyday ]</span></h1>
+            <p>
+                <span>Monday to Saturday.</span>
+                <span>11:00 AM to 4:00 PM.</span>
+            </p>
+        </section>
+
+        <section class="page page4">
+
+            <div class="text">
+                <h1 class="heading">Dominate.</h1>
+                <h2 class="subTitle">From Start to Victory.</h2>
+            </div>
+
+
+        </section>
+
+        <section class="page page5 syllabus">
+
+            <div class="accordian">
+                <div class="top">
+                    <h1>HTML/CSS</h1>
+                    <button> <span>Expand</span>
+                        <div class="icon"><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="feather feather-chevron-down"
+                            >
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                    </button>
+                </div>
+                <div class="panel">
+                    <div class="panelContent">
+                        <p>HTML Basics</p>
+                        <p>Semantic HTML</p>
+                        <p>Forms and Validation</p>
+                        <p>Multimedia Elements (Audio, Video)</p>
+                        <p>CSS Fundamentals</p>
+                        <p>CSS Box Model</p>
+                        <p>Flexbox</p>
+                        <p>Grid Layout</p>
+                        <p>CSS Animations</p>
+                        <p>Transitions</p>
+                        <p>Keyframe Animations</p>
+                        <p>Responsive Design</p>
+                        <p>Media Queries</p>
+                        <p>CSS Variables</p>
+                        <p>CSS Frameworks (TailwindCSS)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordian">
+                <div class="top">
+                    <h1>JavaScript</h1>
+                    <button> <span>Expand</span>
+                        <div class="icon"><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="feather feather-chevron-down"
+                            >
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                    </button>
+                </div>
+                <div class="panel">
+                    <div class="panelContent">
+                        <p>Introduction to JavaScript</p>
+                        <p>Functions (Declaration, Expression, Arrow)</p>
+                        <p>Scope (Global, Local, Block)</p>
+                        <p>Closures</p>
+                        <p>Callbacks</p>
+                        <p>Promises</p>
+                        <p>Async/Await</p>
+                        <p>Error Handling</p>
+                        <p>Event Loop</p>
+                        <p>DOM Manipulation</p>
+                        <p>Event Handling</p>
+                        <p>Object-Oriented Programming (OOP)</p>
+                        <p>Prototypes</p>
+                        <p>Inheritance</p>
+                        <p>`this` Keyword</p>
+                        <p>ES6 Features (Destructuring, Spread Operator)</p>
+                        <p>JSON Handling</p>
+                        <p>Fetch API</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordian">
+                <div class="top">
+                    <h1>React JS</h1>
+                    <button> <span>Expand</span>
+                        <div class="icon"><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="feather feather-chevron-down"
+                            >
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                    </button>
+                </div>
+                <div class="panel">
+                    <div class="panelContent">
+                        <p>JSX</p>
+                        <p>Functional Components</p>
+                        <p>Class Components</p>
+                        <p>Props</p>
+                        <p>State</p>
+                        <p>useState Hook</p>
+                        <p>useEffect Hook</p>
+                        <p>React Router</p>
+                        <p>Context API</p>
+                        <p>Redux</p>
+                        <p>Hooks (useMemo, useCallback, useRef)</p>
+                        <p>Form Handling</p>
+                        <p>Two-Way Binding</p>
+                        <p>Higher-Order Components</p>
+                        <p>Lazy Loading</p>
+                        <p>Component Lifecycle</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordian">
+                <div class="top">
+                    <h1>Data Structures and Algorithms (DSA)</h1>
+                    <button> <span>Expand</span>
+                        <div class="icon"><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="feather feather-chevron-down"
+                            >
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                    </button>
+                </div>
+                <div class="panel">
+                    <div class="panelContent">
+                        <p>Arrays</p>
+                        <p>Linked Lists</p>
+                        <p>Stacks</p>
+                        <p>Queues</p>
+                        <p>Hash Tables</p>
+                        <p>Trees (Binary, BST)</p>
+                        <p>Graphs</p>
+                        <p>Sorting Algorithms</p>
+                        <p>Searching Algorithms</p>
+                        <p>Dynamic Programming</p>
+                        <p>Greedy Algorithms</p>
+                        <p>Backtracking</p>
+                        <p>Recursion</p>
+                        <p>Time Complexity</p>
+                        <p>Space Complexity</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordian">
+                <div class="top">
+                    <h1>Node.js and Express [Backend]</h1>
+                    <button> <span>Expand</span>
+                        <div class="icon"><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="feather feather-chevron-down"
+                            >
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                    </button>
+                </div>
+                <div class="panel">
+                    <div class="panelContent">
+                        <p>HTTP Server</p>
+                        <p>File Handling</p>
+                        <p>Routing in Express</p>
+                        <p>REST APIs</p>
+                        <p>Middleware</p>
+                        <p>Authentication (JWT, OAuth)</p>
+                        <p>Session Management</p>
+                        <p>Cookies</p>
+                        <p>Error Handling</p>
+                        <p>WebSockets (Socket.io)</p>
+                        <p>File Uploads</p>
+                        <p>API Rate Limiting</p>
+                        <p>CORS</p>
+                        <p>Testing (Mocha, Chai)</p>
+                        <p>Security (XSS, CSRF, DOS)</p>
+                        <p>Environment Variables</p>
+                        <p>Debugging</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordian">
+                <div class="top">
+                    <h1>Databases</h1>
+                    <button> <span>Expand</span>
+                        <div class="icon"><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="feather feather-chevron-down"
+                            >
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                    </button>
+                </div>
+                <div class="panel">
+                    <div class="panelContent">
+                        <p>MongoDB</p>
+                        <p>Aggregation in MongoDB</p>
+                        <p>Indexing</p>
+                        <p>Relationships in MongoDB</p>
+                        <p>Redis</p>
+                        <p>Replication</p>
+                        <p>Sharding</p>
+                        <p>MySQL</p>
+                        <p>Queries</p>
+                        <p>Joins in MySQL</p>
+                        <p>Normalization</p>
+                        <p>ACID Properties</p>
+                        <p>Transactions</p>
+                        <p>Stored Procedures & Functions</p>
+                        <p>Triggers</p>
+                        <p>Optimization</p>
+                        <p>Database Design</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordian">
+                <div class="top">
+                    <h1>Git/GitHub</h1>
+                    <button> <span>Expand</span>
+                        <div class="icon"><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="feather feather-chevron-down"
+                            >
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                    </button>
+                </div>
+                <div class="panel">
+                    <div class="panelContent">
+                        <p>Version Control Basics</p>
+                        <p>Branching and Merging</p>
+                        <p>Pull Requests</p>
+                        <p>Git Workflows (GitFlow)</p>
+                        <p>Conflict Resolution</p>
+                        <p>GitHub Collaboration</p>
+                        <p>CI/CD with GitHub Actions</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordian">
+                <div class="top">
+                    <h1>DevOps and Deployment</h1>
+                    <button> <span>Expand</span>
+                        <div class="icon"><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="feather feather-chevron-down"
+                            >
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                    </button>
+                </div>
+                <div class="panel">
+                    <div class="panelContent">
+                        <p>Node.js Deployment (Heroku, AWS)</p>
+                        <p>CI/CD Pipelines</p>
+                        <p>Docker</p>
+                        <p>Containerization</p>
+                        <p>Versioning</p>
+                        <p>Load Balancing</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="accordian">
+                <div class="top">
+                    <h1>Major project</h1>
+                    <button> <span>Expand</span>
+                        <div class="icon"><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="feather feather-chevron-down"
+                            >
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                    </button>
+                </div>
+                <div class="panel">
+                    <div class="panelContent">
+                        <p>Operating System</p>
+                        <p>Computer Network</p>
+                        <p>SEO Principles</p>
+                        <p>GSAP Animations</p>
+                        <p>Framer Motion</p>
+                        <p>AI Tools (ChatGPT, GitHub Copilot)</p>
+                        <p>Resume building</p>
+                        <p>Interview Preparation</p>
+                        <p>Mock Interview</p>
+
+                    </div>
+                </div>
+            </div> -->
+            <div class="accordian">
+                <div class="top">
+                    <h1>Additional Topics</h1>
+                    <button> <span>Expand</span>
+                        <div class="icon"><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="feather feather-chevron-down"
+                            >
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                    </button>
+                </div>
+                <div class="panel">
+                    <div class="panelContent">
+                        <p>Operating System</p>
+                        <p>Computer Network</p>
+                        <p>SEO Principles</p>
+                        <p>GSAP Animations</p>
+                        <p>Framer Motion</p>
+                        <p>AI Tools (ChatGPT, GitHub Copilot)</p>
+                        <p>Resume building</p>
+                        <p>Interview Preparation</p>
+                        <p>Mock Interview</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- <section class="page page3">
+            <div class="text">
+
+                <h1>Training</h1>
+                <h1>which <span><span>matters.</span> </span> </h1>
+<h2 class="subHeading">Beyond Projects, Towards Purpose.</h2> 
+            </div>
+        </section> -->
+
+        <section class="page form">
+            
+
+
+            <script>
+                // const inputGroup = document.querySelector('.input-group');
+                // const dobInput = document.querySelector('#dob');
+
+                // // Add a click event to the input-group
+                // inputGroup.addEventListener('click', () => {
+                //     dobInput.focus();  // Focus on the input field when clicking anywhere in the input-group
+                // });
+                document.querySelector('form').addEventListener('submit', async function (event) {
+                    event.preventDefault();
+
+                    let isValid = true;
+                    const name = document.getElementById('full-name').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const contact = document.getElementById('contact').value.trim();
+                    const education = document.getElementById('education').value.trim();
+                    const experience = document.getElementById('experience').value;
+                    const dob = document.getElementById('dob').value;
+
+                    // Clear previous error messages
+                    document.querySelectorAll('.error-message').forEach(span => span.textContent = '');
+
+                    if (name === '') {
+                        showError('full-name', 'Full Name is required');
+                        isValid = false;
+                    }
+
+                    if (email === '' || !/^\S+@\S+\.\S+$/.test(email)) {
+                        showError('email', 'Valid Email Address is required');
+                        isValid = false;
+                    }
+
+                    if (contact === '' || !/^\d{10}$/.test(contact)) {
+                        showError('contact', 'Valid Contact Number is required');
+                        isValid = false;
+                    }
+
+                    if (education === '') {
+                        showError('education', 'Educational Background is required');
+                        isValid = false;
+                    }
+
+                    if (experience === '') {
+                        showError('experience', 'Programming Experience is required');
+                        isValid = false;
+                    }
+
+                    if (dob === '') {
+                        showError('dob', 'Date of Birth is required');
+                        isValid = false;
+                    }
+
+                    if (isValid) {
+                        try {
+                            document.querySelector(".submitBtn").innerHTML = "<div class='loader'></div>"
+                            const { data } = await axios.post("/kodr/register", { name, email, contact, education, experience, dob })
+                            document.querySelector(".confirmPopup").classList.add("show")
+                            document.querySelector(".submitBtn").innerHTML = "Submit"
+                            disableForm()
+                        } catch (err) {
+                            document.querySelector(".submitBtn").innerHTML = "Submit"
+                            if (err.response.data.message == "Email already registered") {
+                                showError('email', 'Email already registered');
+                            }
+                            if (err.response.data.message == "Phone already registered") {
+                                showError('contact', 'Phone number already registered');
+                            }
+                            console.log(err)
+                        }
+                    }
+
+                });
+                function disableForm() {
+                    const formElements = document.querySelectorAll('form input, form select, form textarea, form button');
+                    formElements.forEach(element => {
+                        element.disabled = true;  // Disable each form element
+                    });
+                }
+                function showError(inputId, message) {
+                    const inputGroup = document.getElementById(inputId).closest('.input-group');
+                    const errorSpan = inputGroup.querySelector('.error-message');
+                    errorSpan.textContent = message;
+                }
+            </script>
+
+
+            <!-- <div class="payment-details">
+
+
+
+
+
+                <img
+                    src="payment.png"
+                    alt=""
+                >
+
+                <p>
+                    <span>OR</span> <br> <br>
+                    Pay via UPI: <span>sheryians@ybl</span>
+                </p>
+
+
+
+                <p>
+                    Pay ₹ 59000 using this QR code or UPI Id and send the screenshot to
+                    <span style="text-wrap: nowrap;">
+                        +91 9691778470 [ Whatsapp ]
+                    </span>
+                    to confirm your registration. <br>
+                    Or contact the same for any queries.
+                </p>
+            </div> -->
+
+        </section>
+    </div>
+    <div class="confirmPopup" id="confirmPopup">
+        <div class="popup-body">
+          <i class="ri-checkbox-circle-line"></i>
+          <p>You have successfully registered! Our team will contact you soon.</p>
+          <button onclick='this.closest(".confirmPopup").classList.remove("show")'>Okay</button>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+    <script
+        defer=""
+        src="/js/singleCourse.js"
+    ></script>
+    <!-- <script src="index.js"></script> -->
+
+    <script>
+        feather.replace();
+
+        document.querySelectorAll('.accordian .top').forEach(accordian => {
+            accordian.addEventListener('click', (event) => {
+                event.target.closest('.accordian').classList.toggle('active')
+            })
+        })
+
+        const mouse = {
+            x: 0,
+            y: 0
+        }
+
+        addEventListener('mousemove', (event) => {
+            mouse.x = event.clientX
+            mouse.y = event.clientY
+        })
+
+        const images = document.querySelectorAll('.floatingImage')
+
+
+        function moveFloatingImages() {
+            requestAnimationFrame(moveFloatingImages)
+
+            images.forEach(image => {
+                image.style.top = mouse.y + 'px'
+                image.style.left = mouse.x + 'px'
+            })
+
+
+
+        }
+        requestAnimationFrame(moveFloatingImages)
+
+        function enroll() {
+            document.querySelector(".form-container").scrollIntoView()
+            // window.scrollTo({
+            //     bottom: 400,
+            //     behavior: 'smooth'
+            // });
+        }
+
+    </script>
+            <style>
+    /* Container styling */
+    .callToActionHover {
+        opacity: 0;
+        position: fixed;
+        bottom: 2%;
+        transform: translateX(-50%);
+        left: 50%;
+        display: flex;
+        gap: 2rem; /* Spacing between buttons */
+        padding: 0.7rem;
+        background-color: #1b1b1bc3;
+        backdrop-filter: blur(5px);
+        border-radius: 8.3px; /* Rounded corners */
+        transition: 0.4s;
+        z-index: 999;
+    }
+    .callToActionHover.hidden{
+        opacity: 0;
+        bottom: -1%;
+        pointer-events: none;
+    }
+    .callToActionHover.visible{
+        opacity: 1;
+        bottom: 2%;
+        pointer-events: all;
+    }
+    
+    .callToActionHover .web{
+        display: flex;
+        gap: 1rem;
+    }
+    
+    /* General button styling */
+    .callToActionHover .btn {
+        font-weight: 300;
+        white-space: nowrap;
+        flex: 1;
+        color: white;
+        padding: 0.7rem 1rem;
+        border: 1px solid #4c4c4c; /* Border color */
+        background-color: var(--ui-element-secondary-color); /* Dark background */
+        font-size: 1.1rem; 
+        border-radius: 8.9px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    /* Button hover effect */
+    .callToActionHover .btn:hover {
+        background-color: #333; /* Slightly lighter background on hover */
+        color: #ddd; /* Lighter text color on hover */
+    }
+
+    /* Specific styling for the "Buy" button */
+    .callToActionHover .btn.buy {
+        background-color: var(--secondary); /* Green background */
+        color: #fff; /* White text */
+        border: none;
+        font-weight: 400;
+    }
+    .callToActionHover .mobile{
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        .callToActionHover {
+            width: 100%;
+            padding: 0.8rem;
+            border-radius: 3px;
+            bottom: 0;
+        }
+        .callToActionHover.visible{
+            opacity: 1;
+            bottom: -0.1%;
+            pointer-events: all;
+        }
+
+        .callToActionHover.hidden{
+            opacity: 1;
+            bottom: -0.1%;
+            pointer-events: all;
+        }
+        .callToActionHover .web{
+            display: none;
+        }
+        .callToActionHover .mobile{
+            display: flex;
+            gap: 1rem;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .callToActionHover .mobile .callback{
+            background-color: var(--ui-element-color);
+            border-radius: 3px;
+            padding: 1rem 0.5rem;
+            font-size: 1.4rem;
+            border: none;
+            width: 40%;
+        }
+        .callToActionHover .mobile .btn.buy span{
+            text-decoration: line-through;
+            font-size: 1.2rem;
+            opacity: 0.6;
+        }
+        .callToActionHover .mobile .btn.buy{
+            width: 60%;
+        }
+        .callToActionHover .btn {
+            width: 100%;
+            border-radius: 3px;
+            padding: 1rem 0.5rem;
+            font-size: 1.4rem;
+        }
+    }
+</style>
+<section>
+    <div class="hidden callToActionHover">
+        <div class="web">
+            <button onclick="window.location.href='/courses'" class="btn">Courses</button>
+            <!-- <button class="btn">Download Brochure</button> -->
+            <button onclick="openRequestCallback()" class="btn">Request Callback</button>
+            
+                <button onclick="enroll()" class="btn buy">Buy Now - ₹</button>
+            
+        </div>
+        <div class="mobile">
+            <button onclick="openRequestCallback()" class="callback" >
+                <i class="ri-phone-line"></i> 
+                Get Callback
+            </button>
+            
+                <button onclick="enroll()" class="btn buy">Buy - ₹ <span>₹NaN</span ></button></div>
+            
+    </div>
+</section>
+
+<script>
+    window.addEventListener("scroll", () => {
+        const scrollIndicator = document.querySelector(".callToActionHover");
+
+        // Get the current scroll position
+        const scrollPosition = window.scrollY;
+
+        // Get the total scrollable height of the page
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+
+        // Set your scroll boundaries (adjust as needed)
+        const showAt = 500; // Show after scrolling 200px
+        const hideBeforeEnd = 700; // Hide 300px before the end of the page
+
+        if (scrollPosition > showAt && scrollPosition < (scrollHeight - clientHeight - hideBeforeEnd)) {
+            scrollIndicator.classList.remove("hidden");
+            scrollIndicator.classList.add("visible");
+        } else {
+            scrollIndicator.classList.remove("visible");
+            scrollIndicator.classList.add("hidden");
+        }
+    });
+</script>
+
+        <section id="footer">
+  <div class="top">
+    <div class="footer-section">
+      <img class="logo" src="https://ik.imagekit.io/sheryians/Sheryians_logo_EzwgcppnD?updatedAt=1701272916848" alt="">
+      <p>Let’s connect with our socials</p>
+      <div class="socials">
+        <a target="_blank" href="https://www.instagram.com/sheryians_coding_school"><i class="ri-instagram-fill"></i></a>
+        <a target="_blank" href="https://in.linkedin.com/company/the-sheryians-coding-school"><i
+          class="ri-linkedin-box-fill"></i></a>
+        <a target="_blank" href="https://discord.gg/D23JkFqrgz"><i class="ri-discord-fill"> </i></a>
+        <a target="_blank" href="https://www.youtube.com/@thesheryianscodingschool"><i class="ri-youtube-fill"></i></a>
+        <a target="_blank" href="https://twitter.com/sheryians_"><i class="ri-twitter-fill"></i></a>
+      </div>
+    </div>
+    <!-- <div class="footer-section">
+      <h1>
+        OUR COURSES
+      </h1>
+      <div class="options">
+        <p>Popular Courses</p>
+        <p>Web Development</p>
+        <p>Data Science</p>
+        <p>Interview Preparation</p>
+        <p>Programming Languages</p>
+        <p>Events</p>
+        <p>FAQs</p>
+      </div>
+    </div> -->
+    <div class="footer-section">
+      <h1>
+        COMPANY
+      </h1>
+      <div class="options">
+        <a target="_blank" href="/aboutUs">About Us</a>
+        <a href="/cdn-cgi/l/email-protection#731b161f1f1c33001b16010a1a121d005d101c1e">Support</a>
+        <a target="_blank" href="/terms-and-conditions/Terms_and_Conditions.pdf">Privacy Policy</a>
+        <a target="_blank" href="/terms-and-conditions/Terms_and_Conditions.pdf">Terms and Condition</a>
+        <a target="_blank" href="/Pricing&Refund-Policy/Pricing-and-Refund_policy.pdf">Pricing and Refund</a>
+        <a target="_blank" href="/hire">Hire From Us</a>
+        <a target="_blank" href="https://ik.imagekit.io/sheryians/Bug_8EBE0pzVa.pdf">Bug Bounty</a>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h1>COMMUNITY</h1>
+      <div class="options">
+        <a target="_blank" href="https://www.instagram.com/inertiabysheryians">Inertia</a>
+        <a target="_blank" href="https://discord.gg/D23JkFqrgz">Discord</a>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h1>Get In Touch</h1>
+
+      <div class="options">
+        <a href="tel:+918109161752">+91 8109161752,</a>
+        <a href="tel:+919691778470">+91 9691778470</a>
+        <a href="/cdn-cgi/l/email-protection#dbb3beb7b7b49ba8b3bea9a2b2bab5a8f5b8b4b6"><span class="__cf_email__" data-cfemail="fd9598919192bd8e95988f84949c938ed39e9290">[email&#160;protected]</span></a>
+        <a target="_blank" href="https://www.google.com/maps/place/Sheryians+Coding+School/@23.2512609,77.4627502,17z/data=!3m1!4b1!4m6!3m5!1s0x397c43977890a98d:0x928a948dc6de732e!8m2!3d23.251256!4d77.4653251!16s%2Fg%2F11gvy2g2z8">23-B, Indrapuri Sector C,
+          Bhopal(MP), 462021</a>
+      </div>
+
+    </div>
+  </div>
+  <div class="bottom">
+    <h1 style="text-align: center;">Copyright &copy; 2024 Sheryians Pvt. Ltd. <br> All Rights Reserved.</h1>
+  </div>
+</section>
+                    </main>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
+<nav>
+  
+  <div class="header">
+   
+    <div
+      style="gap: 0.624em;"
+      class="left"
+      onclick="window.location.href='/'"
+    >
+      <img
+        src="https://ik.imagekit.io/sheryians/Sheryians_logo_EzwgcppnD"
+        alt=""
+      >
+      <!-- <div style="height:1.8em; width:1px; background-color:white; display: inline-block; vertical-align: middle;"></div> -->
+      <span style="margin-top: 0.2em;">Sheryians coding school</span>
+    </div>
+    <div class="right">
+      <a
+        href="/"
+        class="nav-item"
+      >
+        <span>Home</span>
+      </a>
+      <a
+        href="/courses"
+        class="nav-item"
+      >
+        <span>Courses</span>
+      </a>
+      <a
+        href="/kodr"
+        class="nav-item"
+      >
+        <span>Bootcamp(Kodr)</span>
+      </a>
+
+      <button
+        onclick="openRequestCallback()"
+        class="nav-item mobile-item request-callback"
+      >
+        <i class="ri-phone-line"></i>
+        <span>
+          Request Callback
+        </span>
+      </button>
+
+      
+
+
+
+      <button class="nav-item  auth-user ">
+
+        
+        <a
+          href="/signin"
+          class="btn btn-primary sign-in"
+        >
+          Sign In
+        </a>
+        
+      </button>
+
+      <button class="menu nav-item">
+        <div class="menu-toggle">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+        </div>
+
+        <div class="menu-panel">
+          <div class="menu-header">
+            <h1>Menu</h1>
+          </div>
+          <div class="menu-items">
+            <a
+              href="/"
+              class="nav-item menu-item mobile-item"
+            >Home</a>
+            <a
+              href="/courses"
+              class="nav-item menu-item mobile-item"
+            >Courses</a>
+            <a
+              href="/kodr"
+              class="nav-item menu-item mobile-item"
+            >Bootcamp(Kodr)</a>
+            <!-- <a href="https://reimagine.sheryians.com" class="nav-item menu-item mobile-item">Re-Imagine</a> -->
+            
+            
+            <a
+              href="/signin"
+              class="nav-item menu-item mobile-item"
+            >Sign In</a>
+
+            
+          </div>
+        </div>
+
+      </button>
+
+    </div>
+
+
+
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer>
+      let lastTime = 0;
+      let maxFPS = 60; // Change this value to set the maximum FPS
+      let direction = 1
+
+      const nav = document.querySelector('nav');
+      let lastScrollY = window.scrollY;
+      let navRect = null;
+
+      function navPosition(timestamp) {
+        if (!lastTime) {
+          lastTime = timestamp;
+        }
+        const elapsed = timestamp - lastTime;
+        if (elapsed > (1000 / maxFPS)) {
+          lastTime = timestamp;
+
+
+
+          if (navRect) {
+            if (direction === 1 && window.scrollY > 0) {
+              nav.style.transform = `translateY(-${navRect.height}px)`;
+            } else {
+              nav.style.transform = `translateY(0px)`;
+            }
+          } else {
+            navRect = nav.getBoundingClientRect();
+          }
+
+          if (lastScrollY > window.scrollY) {
+            direction = -1;
+          }
+
+          if (lastScrollY < window.scrollY) {
+            direction = 1;
+          }
+          lastScrollY = window.scrollY;
+
+
+
+        }
+        requestAnimationFrame(navPosition);
+      }
+      requestAnimationFrame(navPosition);
+
+
+      if (document.querySelector('.notification-toggle')) {
+        document.querySelector('.notification-toggle').addEventListener('click', () => {
+          document.querySelector('.notification-panel').classList.toggle('show');
+        });
+
+        document.querySelector('.remove-notification-panel').addEventListener('click', () => {
+          document.querySelector('.notification-panel').classList.remove('show');
+        });
+      }
+
+
+      document.querySelector('.menu-toggle').addEventListener('click', function () {
+        if (this.classList.contains('menu-show')) {
+          this.classList.add('menu-close')
+        } else {
+          this.classList.remove('menu-close')
+        }
+        this.classList.toggle('menu-show')
+
+      })
+
+      function handleImageError(e) {
+        document.querySelector(".text-profile-initial").innerHTML = "A"
+        document.querySelector(".text-profile-initial").style.backgroundColor = "var(--accent-color)"
+        document.querySelector(".text-profile-initial").style.display = "flex"
+        document.querySelector(".text-profile-initial").style.justifyContent = "center"
+        document.querySelector(".text-profile-initial").style.alignItems = "center"
+      }
+    </script>
+  </div>
+
+  <section class="popup request-callback">
+    <div class="bg" onclick="closePopup()"></div>
+    <div class="center">
+      <div class="text">
+        <h3>Request a callback</h3>
+        <small>Fill the form below to request a callback from our team.</small>
+        <form
+          action="/request-callback"
+          method="POST"
+          onsubmit="requestCallback(event)"
+        >
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+              required
+            >
+            <span class="error">Invalid Name</span>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input
+              type="tel"
+              name="contact"
+              id="phone"
+              placeholder="Phone"
+              required
+            >
+            <span class="error">Invalid Phone</span>
+          </div>
+          <div class="form-group">
+            <label for="datetime-request-callback">Select Date and Time
+              <i class="ri-calendar-line"></i>
+            </label>
+            <input
+              type="datetime-local"
+              name="datetime"
+              id="datetime-request-callback"
+              required
+              value="2024-12-18T13:30"
+            >
+            <span class="error">Invalid Date and Time</span>
+          </div>
+          <div class="form-group submit">
+            <button
+              type="submit"
+              class="btn btn-primary"
+              style="width: 100%; background-color: var(--accent-color); color: black;"
+            >Submit</button>
+          </div>
+        </form>
+      </div>
+      <div onclick="closePopup()" class="closePopup">
+        <i class="ri-close-circle-line"></i>
+      </div>
+    </div>
+  </section>
+  <section
+    onclick="closePopup()"
+    class="popup discordJoinPopup"
+  >
+    <div class="center">
+      <div class="images">
+        <img
+          src="/Sheryians_Logo_wFKd9VClG.png"
+          alt=""
+        >
+        <i class="ri-add-line"></i>
+        <img
+          src="/images/discord/discord.png"
+          alt=""
+        >
+      </div>
+      <div class="text">
+        <h3>
+          Authorize discord to access course support
+        </h3>
+        <small> in order to access our course support channel on the discord you have to authorize us from the discord.
+        </small>
+
+        <div class="buttons">
+          <button class="cancel">Cancel</button>
+          <button
+            onclick="window.open('/classroom/joinChannel/channle/role')"
+            class="authorize"
+          >Authorize</button>
+        </div>
+
+      </div>
+      <div
+        onclick="closeDiscordPopup()"
+        class="closePopup"
+      >
+        <i class="ri-close-circle-line"></i>
+      </div>
+    </div>
+  </section>
+</nav>
+<script
+  defer
+  src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+  integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+<script>
+  // Initialize the intl-tel-input for the phone input
+    const phnInp = document.getElementById("phone");
+    const iti = intlTelInput(phnInp, {
+      initialCountry: "IN",
+      utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js", // For number formatting
+    });
+
+    // Add validation before form submission
+</script>
+
+<script defer>
+  function lazyLoadImages(attribute) {
+    const lazyImages = document.querySelectorAll(`[${attribute}]`);
+
+    const options = {
+      root: null, // viewport
+      rootMargin: '0px',
+      threshold: 0.1 // load when 10% of the image is visible
+    };
+
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.lazySrc;
+          img.removeAttribute('data-lazy-src');
+          observer.unobserve(img);
+        }
+      });
+    }, options);
+
+    lazyImages.forEach(image => {
+      imageObserver.observe(image);
+    });
+  }
+  async function openNotification(link, id) {
+    try {
+      axios.post("/classroom/notifications/update", {
+        notificationId: id
+      })
+      window.location.href = link
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  function renderTimeSinceDate() {
+    document.querySelectorAll(".notifications small").forEach((elem) => {
+      elem.textContent = timeSince(new Date(elem.getAttribute('data-time')))
+    })
+  }
+
+  function timeSince(date) {
+    // Get the current date
+    const now = new Date();
+
+    // Calculate the difference in milliseconds
+    const difference = now.getTime() - date.getTime();
+
+    // Handle negative difference (future date)
+    if (difference < 0) {
+      return "Date in the future";
+    }
+
+    // Calculate days and months
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const months = Math.floor(days / 30);
+
+    // Determine unit (days or months)
+    const unit = months >= 1 ? "months" : "days";
+    const value = months >= 1 ? months : days;
+
+    // Format the output string
+    const output = `${value} ${unit} ago`;
+
+    return output;
+  }
+
+
+  async function joinDiscord(channel_id, role_id, user_id) {
+    let response = await axios.post(`/classroom/is_user_in_guild/${user_id}`)
+    console.log(response)
+    const isUserInGuild = response.data.is_user_in_guild
+
+    if (!isUserInGuild) {
+      openDiscordPopup()
+      return
+    }
+
+    const currentLectureId = document.querySelector('.currentPlaying').getAttribute('data-lecture-id')
+    window.open(`/classroom/ticket/${currentLectureId}`)
+  }
+
+  async function enterDiscord(channel_id, role_id, user_id) {
+    let response = await axios.post(`/classroom/is_user_in_guild/${user_id}`)
+    const isUserInGuild = response.data.is_user_in_guild
+
+    if (!isUserInGuild) {
+      openDiscordPopup()
+      return
+    }
+
+    window.open(`/classroom/joinChannel/${channel_id}/${role_id}`)
+  }
+
+  function openDiscordPopup() {
+    document.querySelector('.discordJoinPopup').style.display = 'flex'
+    document.querySelector('.discordJoinPopup').classList.add('active')
+    document.querySelector('.discordJoinPopup').style.opacity = '1'
+    try {
+      if (lenis)
+        lenis.stop()
+    } catch (err) {
+
+    }
+  }
+
+
+
+  function closePopup() {
+    document.querySelectorAll('.popup').forEach(pop => {
+      pop.classList.remove('active')
+      pop.style.display = 'none'
+      pop.style.opacity = '0'
+    })
+
+    try {
+      if (lenis)
+        lenis.start()
+    } catch (er) {
+
+    }
+  }
+
+
+  function openRequestCallback() {
+    const requestCallback = document.querySelector('.popup.request-callback')
+    requestCallback.style.display = 'flex'
+    requestCallback.classList.add('active')
+    requestCallback.style.opacity = '1'
+  }
+
+  function requestCallback(event) {
+    event.preventDefault()
+
+    console.log(event.target)
+
+    const nameInput = event.target.querySelector('#name');
+    const phoneInput = event.target.querySelector('#phone');
+    const datetimeInput = event.target.querySelector('#datetime-request-callback');
+
+    let isValid = true;
+
+    if (!nameInput.value.trim()) {
+      nameInput.classList.add('error');
+      isValid = false;
+    } else {
+      nameInput.classList.remove('error');
+    }
+
+    if (!iti.isValidNumber()) {
+      phoneInput.classList.add('error');
+      isValid = false;
+    } else {
+      phoneInput.classList.remove('error');
+    }
+
+    if (!datetimeInput.value.trim()) {
+      datetimeInput.classList.add('error');
+      isValid = false;
+    } else {
+      datetimeInput.classList.remove('error');
+    }
+
+    if (!isValid) {
+      return;
+    }
+
+    const form = event.target
+    const data = new FormData(form)
+    console.log(iti.getNumber())
+    axios.post(form.action, {
+      name: data.get('name'),
+      contact: iti.getNumber(),
+      datetime: data.get('datetime')
+    }).then((response) => {
+      console.log(response)
+      closePopup()
+    }).catch((err) => {
+      console.log(err)
+    })
+  }
+
+
+
+  lazyLoadImages('data-lazy-src')
+  lazyLoadImages('srcset')
+</script>
+
+<script>
+  const phoneNumber = document.getElementById('phoneNumber');
+  const contactNumberValidation = document.getElementById('contactNumberValidation');
+  const otpErrorMessage = document.getElementById('otpErrorMessage');
+  const email = ''
+  const indianMobileNumberRegex = /^(\+91|91)[6-9]\d{9}$/;
+
+  const sendOTP = async (phoneNumber) => {
+    const response = await fetch('/signup/send-otp', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ phoneNumber }),
+    });
+    const data = await response.json();
+    return data;
+  };
+
+  let interval; // Declare interval in the outer scope
+
+  // Function to start the timer for OTP resend
+  const startTimer = () => {
+    stopTimer();
+    let time = 30;
+    const timer = document.querySelector('.timer');
+    const resendOTP = document.getElementById('resend-otp');
+    const resendOTPText = document.getElementById('resend-otp-text');
+    resendOTP.style.pointerEvents = 'none';
+    resendOTP.style.cursor = 'not-allowed';
+    resendOTPText.textContent = 'Resend OTP in';
+    interval = setInterval(() => {
+      time -= 1;
+      timer.textContent = `0:${time < 10 ? `0${time}` : time}`;
+      if (time === 0) {
+        clearInterval(interval);
+        resendOTP.style.cursor = 'pointer';
+        resendOTP.style.pointerEvents = 'auto';
+        timer.textContent = '';
+        resendOTPText.textContent = 'Resend OTP';
+      }
+    }, 1000);
+  };
+
+  // Function to stop the timer for OTP resend and clear the timer function
+  const stopTimer = () => {
+    const timer = document.querySelector('.timer');
+    timer.textContent = '';
+    clearInterval(interval); // Clear the interval
+  };
+
+  document.getElementById('resend-otp').addEventListener('click', async () => {
+      const timer = document.querySelector('.timer');
+      const phoneNumber = '+91' + document.getElementById('phoneNumber').value;
+      if (timer.textContent === '') {
+        const response = await fetch('/signup/resend-otp', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ phoneNumber }),
+        });
+        const data = await response.json();
+        if (!data.message == 'success') {
+          document.getElementById('otpErrorMessage').textContent = data.reason || 'Error while sending OTP';
+        }
+        // clear the OTP input fields
+        document.querySelectorAll('.otp-input').forEach((input) => {
+          input.value = '';
+        });
+        document.getElementById('digit1').focus();
+        resetOTPInput();
+        document.getElementById('otpErrorMessage').textContent = '';
+        startTimer();
+      }
+    });
+    
+  function disableOTPInputsAndStartTimer(){
+    const otpInputs = document.querySelectorAll('.otp-input');
+    otpInputs.forEach((input) => {
+      input.disabled = true;
+      input.opacity = 0.5;
+    });
+    // startTimer();
+  }
+
+  function validateOTP(otp) {
+    updateLoader()
+    const phoneNumber = '+91' + document.getElementById('phoneNumber').value;
+    disableOTPInputsAndStartTimer();
+    fetch('/signup/verify-account', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ phoneNumber, otp,email }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.message === 'success') {
+          // Proceed to the next step
+          setOTPInput("success")
+          document.querySelector(".phoneNumberPopup").remove()
+        } else {
+          setOTPInput("error")
+          otpErrorMessage.textContent = data.reason || 'Invalid OTP';
+        }
+      })
+      .catch((error) => {
+        console.error('Error verifying OTP:', error);
+        otpErrorMessage.textContent = 'An error occurred. Please try again.';
+      }).finally(() => {
+        resetLoader()
+      });
+  }
+
+
+
+  // OTP input fields auto focus and backspace, paste functionality
+  const otpInputs = document.querySelectorAll('.otp-input');
+
+    otpInputs.forEach((input, index) => {
+      document.querySelectorAll(".otp-input").forEach((inp)=>{
+        inp.style.border = "1px solid transparent";
+      })
+      input.addEventListener('input', (e) => {
+        // Allow only digits
+        input.value = input.value.replace(/[^0-9]/g, '');
+
+        // Move to next input if a digit is entered
+        if (input.value.length === 1 && index < otpInputs.length - 1) {
+          otpInputs[index + 1].focus();
+        }
+
+        // Collect the OTP from all inputs
+        const otp = Array.from(otpInputs).map((input) => input.value).join('');
+
+        // If all digits are entered, validate the OTP
+        if (otp.length === otpInputs.length) {
+          validateOTP(otp);
+        }
+      });
+
+      // Handle backspace to move focus to the previous input
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Backspace' && input.value === '' && index > 0) {
+          otpInputs[index - 1].focus();
+        }
+      });
+
+      // Handle paste event
+      input.addEventListener('paste', (e) => {
+        e.preventDefault();
+        const pasteData = e.clipboardData.getData('text').replace(/\D/g, '');
+        const digits = pasteData.split('');
+        otpInputs.forEach((input, idx) => {
+          input.value = digits[idx] || '';
+        });
+
+        // Focus the next input or the last one
+        const nextInputIndex = digits.length < otpInputs.length ? digits.length : otpInputs.length - 1;
+        otpInputs[nextInputIndex].focus();
+
+        // Collect the OTP from all inputs
+        const otp = Array.from(otpInputs).map((input) => input.value).join('');
+
+        // If all digits are entered, validate the OTP
+        if (otp.length === otpInputs.length) {
+          validateOTP(otp);
+        }
+      });
+    });
+    
+    // check email validation while typing
+
+    // Debounce function to limit the rate of function calls
+    function debounce(func, delay) {
+      let debounceTimer;
+      return function (...args) {
+        const context = this;
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => func.apply(context, args), delay);
+      };
+    }
+
+    // Event listener for email input
+
+
+    const phoneNumberInput = document.getElementById('phoneNumber');
+    // Event listener for phone number input
+    phoneNumberInput.addEventListener('input', debounce(async function (e) {
+        const value = e.target.value.trim();
+
+        if(value.length != 10) {
+          return;
+        }
+
+        const formattedNumber = `+91${value}`;
+
+        // Validate phone number format (10 digits)
+        if (indianMobileNumberRegex.test(formattedNumber)) {
+          contactNumberValidation.textContent = 'Checking phone number availability...';
+          contactNumberValidation.style.color = 'white';
+
+          try {
+            const response = await fetch('/signup/check-phone-number', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ phoneNumber: formattedNumber }),
+            });
+
+            const data = await response.json();
+
+            if (data.message !== 'success') {
+              contactNumberValidation.textContent = data.reason || 'Error checking phone number';
+              contactNumberValidation.style.color = 'var(--error-color)';
+            } else {
+              contactNumberValidation.textContent = '';
+              setTimeout(() => {
+                document.querySelector('#otp-verification').scrollIntoView({ behavior: 'smooth' });
+              }, 0);
+              // clear the OTP input fields
+              document.querySelectorAll('.otp-input').forEach((input) => {
+                input.value = '';
+              });
+              document.querySelector('.otp-input').focus();
+              resetOTPInput();
+              document.getElementById('otpErrorMessage').textContent = '';
+
+              contactNumberValidation.textContent = '';
+              document.getElementById('otp-mobile-number').textContent = value;
+              startTimer();
+              sendOTP(formattedNumber).then((data) => {
+                if (!data.message == 'success') {
+                  contactNumberValidation.textContent = data.reason || 'Error while sending OTP';
+                }
+              });
+            }
+          } catch (error) {
+            console.error('Error checking phone number:', error);
+            contactNumberValidation.textContent = 'Error checking phone number';
+            contactNumberValidation.style.color = 'var(--error-color)';
+          }
+        } else {
+          contactNumberValidation.textContent = 'Invalid phone number';
+          contactNumberValidation.style.color = 'var(--error-color)';
+        }
+      }, 500)); // Adjust the delay as needed (e.g., 500 milliseconds)
+
+      function updateLoader() {
+        document.querySelectorAll(".otp-input").forEach((input) => {
+          input.disabled = true;
+          input.style.cursor = "not-allowed";
+          input.style.opacity = "0.5";
+        });
+      }
+
+      function resetLoader() {
+        document.querySelectorAll(".otp-input").forEach((input) => {
+          input.disabled = false;
+          input.style.cursor = "text";
+          input.style.opacity = "1";
+        });
+      }
+
+      function setOTPInput(type){
+        if(type == "error"){
+          document.querySelectorAll(".otp-input").forEach((input) => {
+            input.style.border = "1px solid var(--error-color)";
+          });
+        }else{
+          document.querySelectorAll(".otp-input").forEach((input) => {
+            input.style.border = "1px solid green";
+          });
+        }
+      }
+
+      function resetOTPInput(){
+        document.querySelectorAll(".otp-input").forEach((input) => {
+          input.style.border = "1px solid transparent";
+        });
+      }
+</script>
+
+</body>
+
+</html>
+
